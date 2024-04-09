@@ -1,0 +1,339 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #050505;
+    background: #FFAC3E;
+    height: 100vh;
+
+    font-family: 'Robot';
+    font-size: 16px;
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    width: 250px; /* Adjust the size of the logo */
+    position: absolute;
+    top: -38px; /* Adjust the top position */
+    left: 650px; /* Adjust the left position */
+    margin-bottom: 20px;
+    
+}
+.m-form-header {
+    text-align: right;
+    background-color: #fff;
+    border: 2px solid #050505;
+    border-radius: 10px;
+
+    width: 50%;
+    margin-top: 10px;
+    padding: 50px;
+}
+
+.m-form-header h1{
+    
+    font-size: 30px;
+    margin-bottom: 1px;
+}
+.m-form-header h2{
+
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+
+.marjestic-form{
+    background-color: #fff;
+    border: 1px solid #050505;
+    border-radius: 15px;
+
+    width: 50%;
+    padding: 50px;
+    margin:40px;
+}
+
+.form-row{
+    margin-bottom: 40px;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+
+.form-row label{
+    margin-bottom: 20px;
+}
+
+.form-row input[type='text'],
+.form-row input[type= 'email'],
+.form-row input[type= 'number']
+{
+    background-color: #ebe8de;
+    border: 2px solid #050505;
+    border-radius: 10px;
+
+    width: 50%;
+    padding: 7px;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.legacy-form-row {
+    border: none;
+    margin-bottom: 40px;
+}
+
+.legacy-form-row legend {
+    margin-bottom: 15px;
+}
+
+.legend-form-row .radio-label {
+    display: block;
+    font-size: 14px;
+    padding: 0 20px 0 10px;
+}
+
+.legacy-form-row input[type="radio"] {
+    margin-top: 2px;
+}
+
+.legacy-form-row .radio-label , 
+.legacy-form-row input[type="radio"] {
+    float: center;
+}
+fieldset.legacy-form-row legend::after 
+{
+    content: "*";
+    color: red;
+}
+
+button, li, a{
+    all: unset;
+    box-sizing: border-box;
+}
+#dropdown{
+    
+    max-width: 250px;
+    width: 200%;
+  
+    position: relative;
+    margin: 0 auto; /* Center the dropdown horizontally */
+    margin-left: 144px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    background-color: #ebe8de;
+    border: 2px solid #050505;
+    border-radius: 10px;
+ 
+}
+
+.dropdown-toggle, .menu-item, .submenu-item{
+    width: 100%;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+:is(.menu-item, .submenu-item):first-child{
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+:is(.menu-item, .submenu-item):hover{
+    background-color: #FFAC3E;
+    border-radius: 6px;
+}
+
+.dropdown-toggle, .submenu-toggle{
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+
+}
+
+.dropdown-toggle > span 
+{
+    color: black;
+}
+.adjust 
+{
+    width: 20px;
+    rotate: 180deg;
+    color: #FFAC3E;
+    transition: 0.25s ease;
+}
+.adjust2
+{
+    width: 200px;
+    rotate: 90deg;
+    transition: 0.25s ease;
+
+}
+.dropdown-toggle.open > i{
+    rotate: 180deg;
+}
+.dropdown{
+    position: relative;
+    float: center;
+}
+.menu, .submenu{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    position: absolute;
+    left: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;   
+}
+.menu
+{
+    width: 100%;
+    translate: all 0.3s ease;
+}
+
+.menu.open{
+    visibility: visible;
+    opacity: 1;
+    translate: 0 12px;
+}
+
+.submenu{
+    width: max-content;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    translate: -12px 0;
+}
+.menu-item:hover > .submenu-toggle + .submenu{
+    visibility: visible;
+    opacity: 1;
+    translate: 8px 0;
+}
+.form-row .placeOrder,
+.form-row .cancelOrder
+{
+    font-family: 'Roboto';
+    font-size: 14px;
+    background-color: #fff;
+    width: 20%;
+    border: 2px solid #050505;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+.form-row .placeOrder
+{
+     margin-left: 185px;
+}
+.form-row .cancelOrder
+{
+    margin-left: 5px;
+}
+.form-row .placeOrder:hover
+{
+    background-color:#FFAC3E;
+}
+
+.form-row .cancelOrder:hover
+{ 
+    background-color:rgb(226, 97, 97);
+  
+}
+@media only screen and (min-width: 700px) {
+    .m-form-header,
+    .marjestic-form{
+        width: 600px;
+    }
+
+    .form-row {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        height: initial;
+    }
+
+    .form-row input[type = 'text'],
+    .form-row input[type = 'number'],
+    .form-row input [type = 'email'],
+    .form-row select,
+    .form-row textarea {
+        width: 250px;
+        height: initial;
+        border-radius: 10px;
+    }
+    .form-row label 
+    {
+        text-align: right;
+        width: 120px;
+        margin-top: 10px;
+        padding-right: 10px;
+    }
+    .legacy-form-row {
+        margin-bottom: 10px;
+    }
+    .legacy-form-row legend {
+        width: 150px;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .legacy-form-row legend {
+        float: left;
+    }
+    .form-row input[type = 'text']:invalid,
+    .form-row input[type = 'email']:invalid
+    {
+        border: 1px solid #D55C5F;
+        color: #D55C5F;
+        box-shadow: none;
+    }
+    .form-row textarea 
+    {
+        font-family: 'Roboto'; 
+        font-size: 14px;
+        
+        background-color: #ebe8de;
+        border: 2px solid #050505;
+        border-radius: 10px;
+        
+        min-height: 200px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+        padding: 7px;
+        width: 51%;
+        resize: none;
+    }
+    .form-row .instructions 
+    {   color: #545455;
+        font-size: 14px;
+        margin-bottom: 30px;
+       margin: 0 auto;
+       
+    }
+    .form-row label.required::after {
+        content: "*";
+        color: red;
+    }
+    .form-row select
+    {
+        width: 50%;
+        padding: 10px;
+        font-size: 14px;
+        background-color: #e1ddd1;
+        border: 2px solid #050505;
+        border-radius: 10px;
+        margin-left: 25px;
+    }
+    
+}
+
